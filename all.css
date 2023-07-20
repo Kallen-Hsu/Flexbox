@@ -84,7 +84,7 @@ video {
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline;
+    vertical-align: middle;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -130,39 +130,45 @@ table {
 }
 
 *,
-h1,
-h2,
-p,
-li,
-ul,
-a {
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+}
+
+body {
     font-family: 'Bruno Ace SC', cursive;
+
+}
+
+.bkg {
+    background-color: #000000;
+}
+
+.container {
+    max-width: 1296px;
+    margin: 0 auto;
 }
 
 .menu {
-    height: 48px;
-    padding: 40px 312px 0px 312px;
-    background-color: black;
-}
-
-.menu ul {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-
+    justify-content: space-between;
+    padding-top: 40px;
+    background-color: black;
 }
 
 .menu a {
     display: block;
-    width: 306px;
     font-size: 16px;
     line-height: 24px;
     text-decoration: none;
     color: #D1D1D1;
-    margin-right: 61px;
 }
 
-.text_r {
+.txt-r {
     text-align: right;
 }
 
@@ -207,6 +213,41 @@ a {
     width: 636px;
     text-align: right;
 
+}
+
+.items button {
+    width: 185px;
+    height: 48px;
+    border-radius: 32px;
+    padding: 12px, 24px, 12px, 24px;
+    gap: 4px;
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/e893787047e19651ac4c52cab7aad75ee2f3db1f/2023week2/arrow_outward.svg);
+    background-position: bottom 10px right 20px;
+    background-repeat: no-repeat;
+
+}
+
+.items button img {
+    width: 24px;
+    height: 24px;
+}
+
+.items button:hover {
+    background-color: #00FFA3;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    border-radius: 32px;
+    line-height: 1.5;
+    margin-left: auto;
+
+}
+
+.btn span {
+    padding-left: 24px;
+    font-family: 'Bruno Ace SC', cursive;
 }
 
 .introduction {
@@ -280,12 +321,15 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-right: 134px;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 .card {
     width: 306px;
     height: 148px;
     border: 1px solid #E3E3E3;
+
 }
 
 .card ul {
@@ -321,8 +365,114 @@ a {
     color: #FFFFFFFF;
 }
 
-.background img {
+.background a img {
+    width: 162px;
+    height: 162px;
+    border-radius: 40px;
+    gap: 20px;
+}
+
+.background a img:hover {
+    box-shadow: 0px 0px 16px 3px rgba(144, 148, 255, 0.9);
+
+}
+
+.img_style1 {
+    margin-right: 113px;
     width: 100px;
     height: 100px;
-    
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 160px auto 160px;
+    vertical-align: bottom;
+
+}
+
+.project h2 {
+    width: 746px;
+    font-size: 64px;
+    line-height: 96px;
+    margin-bottom: 16px;
+    margin-left: 532px;
+}
+
+.d-f p {
+    width: 636px;
+    height: 196px;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.d-f {
+    display: flex;
+}
+
+.f-w-w {
+    flex-wrap: wrap;
+}
+
+.d-b {
+    display: block;
+}
+
+.btn2 {
+    display: block;
+    border-radius: 32px;
+    width: 185px;
+    height: 48px;
+    margin-top: 76px;
+    color: white;
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/arrow_outward-white.png?raw=true);
+    background-position: bottom 10px right 20px;
+    background-repeat: no-repeat;
+    background-color: black;
+    font-family: 'Bruno Ace SC', cursive;
+    padding: 12px, 24px, 12px, 52px;
+}
+
+.mb-24 {
+    margin-bottom: 24px;
+}
+
+.f-w-w {
+    flex-wrap: wrap;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    padding: 272px auto 160px;
+
+}
+
+
+.wrap img {
+    margin-right: 24px;
+}
+
+.style1 {
+    height: 530px;
+    flex-direction: column;
+}
+
+.style1 img {
+    margin-bottom: 3.5px;
+}
+
+.footer {
+    height: 104px;
+    background-color: #000000;
+}
+
+.footer p {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: white;
+    padding-top: 40px;
 }
